@@ -36,7 +36,7 @@ public class ByteCodeUtils {
     /**
      * 读取包中指定的本地字节码文件流，并且将流转换成 byte 数组
      * @param in 输入流
-     * @return
+     * @return 返回字节码文件的 byte 数组
      */
     public static byte[] readLocalClassAsBytes(InputStream in) {
         byte[] bytes;
@@ -60,7 +60,7 @@ public class ByteCodeUtils {
      * @return 返回字节码数据字节数组
      * @throws IOException 抛出 IO 异常
      */
-    public static byte[] getRemoteClassFileAsBytes(String urlString) throws IOException {
+    public static byte[] getRemoteClassFileAsBytesByUrl(String urlString) throws IOException {
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setConnectTimeout(1000);
