@@ -1,4 +1,4 @@
-package com.webbdong.jvm._1_2_loadxar;
+package com.webbdong.jvm.loadxar;
 
 import com.webbdong.jvm.util.ByteCodeUtils;
 import com.webbdong.jvm.util.ZipUtils;
