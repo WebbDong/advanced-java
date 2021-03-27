@@ -1,4 +1,4 @@
-package com.webbdong.jvm._1_1_loadxlass;
+package com.webbdong.jvm.loadxlass;
 
 import com.webbdong.jvm.util.ByteCodeUtils;
 
