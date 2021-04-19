@@ -1,6 +1,6 @@
-package com.webbdong.jvm.hotloadandunload.hotload;
+package com.webbdong.classloader.hotloadandunload.hotload;
 
-import com.webbdong.jvm.util.ByteCodeUtils;
+import com.webbdong.classloader.util.ByteCodeUtils;
 import lombok.SneakyThrows;
 
 import java.io.FileInputStream;

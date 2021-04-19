@@ -1,6 +1,6 @@
-package com.webbdong.jvm.loadxlass;
+package com.webbdong.classloader.loadxlass;
 
-import com.webbdong.jvm.util.ByteCodeUtils;
+import com.webbdong.classloader.util.ByteCodeUtils;
 
 import java.io.InputStream;
 

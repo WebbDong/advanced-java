@@ -1,4 +1,4 @@
-package com.webbdong.jvm.hotloadandunload.hotload;
+package com.webbdong.classloader.hotloadandunload.hotload;
 
 /**
  * 类热加载

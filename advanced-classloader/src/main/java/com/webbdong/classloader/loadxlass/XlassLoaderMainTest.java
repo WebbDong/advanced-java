@@ -1,4 +1,4 @@
-package com.webbdong.jvm.loadxlass;
+package com.webbdong.classloader.loadxlass;
 
 /**
  * 1.1 使用自定义Classloader机制，实现xlass的加载

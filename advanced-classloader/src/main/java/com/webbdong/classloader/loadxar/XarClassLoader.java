@@ -1,7 +1,7 @@
-package com.webbdong.jvm.loadxar;
+package com.webbdong.classloader.loadxar;
 
-import com.webbdong.jvm.util.ByteCodeUtils;
-import com.webbdong.jvm.util.ZipUtils;
+import com.webbdong.classloader.util.ByteCodeUtils;
+import com.webbdong.classloader.util.ZipUtils;
 import lombok.SneakyThrows;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.webbdong.jvm.hotloadandunload;
+package com.webbdong.classloader.hotloadandunload;
 
 /**
  * 测试类

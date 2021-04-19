@@ -1,4 +1,4 @@
-package com.webbdong.jvm.loadxar;
+package com.webbdong.classloader.loadxar;
 
 import lombok.SneakyThrows;
 
