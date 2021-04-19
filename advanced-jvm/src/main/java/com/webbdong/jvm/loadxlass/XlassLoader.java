@@ -2,7 +2,6 @@ package com.webbdong.jvm.loadxlass;
 
 import com.webbdong.jvm.util.ByteCodeUtils;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -16,15 +15,11 @@ public class XlassLoader extends ClassLoader {
     public Class<?> findClass(String name) throws ClassNotFoundException {
         String xlassName = name.endsWith(".xlass") ? name.replace(".xlass", "") : name;
         String xlassFileName = name.contains(".xlass") ? name : name + ".xlass";
-        byte[] bytes;
-        try (InputStream in = XlassLoader.class.getClassLoader().getResourceAsStream(xlassFileName)) {
-            if (in == null) {
-                throw new ClassNotFoundException(name);
-            }
-            bytes = ByteCodeUtils.readLocalClassAsBytes(in);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        InputStream in = XlassLoader.class.getClassLoader().getResourceAsStream(xlassFileName);
+        if (in == null) {
+            throw new ClassNotFoundException(name);
         }
+        byte[] bytes = ByteCodeUtils.readLocalClassAsBytes(in);
         ByteCodeUtils.xlassDecode(bytes);
         return defineClass(xlassName, bytes, 0, bytes.length);
     }
