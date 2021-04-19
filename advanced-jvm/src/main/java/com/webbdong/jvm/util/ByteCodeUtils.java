@@ -1,5 +1,7 @@
 package com.webbdong.jvm.util;
 
+import lombok.SneakyThrows;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -38,18 +40,11 @@ public class ByteCodeUtils {
      * @param in 输入流
      * @return 返回字节码文件的 byte 数组
      */
+    @SneakyThrows
     public static byte[] readLocalClassAsBytes(InputStream in) {
-        byte[] bytes;
-        try {
-            bytes = new byte[in.available()];
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        try {
-            in.read(bytes, 0, bytes.length);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        byte[] bytes = new byte[in.available()];
+        try (InputStream stream = in) {
+            stream.read(bytes, 0, bytes.length);
         }
         return bytes;
     }
