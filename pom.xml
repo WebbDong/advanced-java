@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>advanced-jvm</module>
+        <module>advanced-classloader</module>
         <module>advanced-nio</module>
         <module>advanced-concurrent</module>
         <module>advanced-framework</module>
