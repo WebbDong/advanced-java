@@ -69,6 +69,7 @@ public class ClassFileUpdatedObserver extends Observable {
             while (!stop) {
                 long lastModifiedTime = FileUtils.getLastModifiedTime(classFile);
                 if (oldLastModifiedTime != lastModifiedTime && lastModifiedTime != -1) {
+                    System.out.println(classFile.getName() + " changed....");
                     ClassFileUpdatedObserver.this.notifyChanged();
                     oldLastModifiedTime = lastModifiedTime;
                 }
