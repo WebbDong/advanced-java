@@ -12,4 +12,11 @@
     <artifactId>advanced-classloader</artifactId>
     <description>类加载器</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
