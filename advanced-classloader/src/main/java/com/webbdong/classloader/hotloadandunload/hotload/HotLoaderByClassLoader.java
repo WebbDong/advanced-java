@@ -6,15 +6,15 @@ import lombok.SneakyThrows;
 import java.io.FileInputStream;
 
 /**
- * 类热加载器
+ * 通过类加载器实现类热加载
  * @author Webb Dong
  * @date 2021-04-18 6:05 PM
  */
-public class HotLoader {
+public class HotLoaderByClassLoader {
 
     private HotLoadClassLoader classLoader;
 
-    public HotLoader(String basePath) {
+    public HotLoaderByClassLoader(String basePath) {
         classLoader = new HotLoadClassLoader(basePath);
     }
 
