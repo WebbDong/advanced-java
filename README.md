@@ -1,5 +1,5 @@
 ## Java 进阶训练
-### 1. JVM、ClassLoader
+### 1. ClassLoader
 > ClassLoader、模块化、动态加载的插件机制  
 > [1.1 使用自定义 Classloader 机制，实现 xlass 的加载](./advanced-classloader/src/main/java/com/webbdong/classloader/loadxlass)      
 > [1.2 实现 xlass 打包的 xar（类似 class 文件打包的 jar）的加载](./advanced-classloader/src/main/java/com/webbdong/classloader/loadxar)   
