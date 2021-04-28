@@ -28,16 +28,17 @@ public class ClassUnload {
      */
     @SneakyThrows
     public static void main(String[] args) {
-        final String basePath = "D:/develop/workspace/java/advanced-java/advanced-jvm/target/classes/";
-        final String className = "com.webbdong.jvm.hotloadandunload.TestClass";
+        final String basePath = "D:/develop/workspace/java/advanced-java/advanced-classloader/target/classes/";
+        final String className = "com.webbdong.classloader.hotloadandunload.TestClass";
         MyClassLoader classLoader = new MyClassLoader(basePath);
         Class<?> aClass = classLoader.findClass(className);
         Object obj = aClass.newInstance();
         aClass.getMethod("run").invoke(obj);
 
+        classLoader = null;
         aClass = null;
         obj = null;
-        classLoader = null;
+
         System.gc();
     }
 
